@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.91);
+}
+
+:root {
+    --font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+    --transition: 0.3s ease;
+}
+
+nav {
+    width: 100%;
+    height: fit-content;
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.logo {
+    width: fit-content;
+    gap: 20px;
+    display: flex;
+    padding: 10px;
+}
+
+#headphone_logo {
+    font-size: 2rem;
+    color: blueviolet;
+}
+
+.web_name {
+    font-size: 1.5rem;
+    color: rgb(58, 78, 228);
+    letter-spacing: 2px;
+}
+
+.ref_list {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ref_list ul {
+    padding: 0px 10px;
+    font-family: var(--font);
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.ref_list ul li {
+    transition: var(--transition);
+}
+
+.ref_list ul li a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 10px;
+}
+
+.ref_list ul li:hover {
+    transform: scale(1.07);
+}
+
+.ref_list ul li a:active {
+    color: red;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.order-product i {
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.order-product i:hover {
+    transform: scale(1.07);
+}
+
+.order-product button {
+    width: 100px;
+    padding: 7px 0px;
+    color: #1be27f;
+    border: 3px solid #19da79;
+    border-radius: 20px;
+    background-color: #000000ad;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.order-product button:hover {
+    background-color: #0beb7b;
+    color: white;
+}
+
+.order-product button:active {
+    background-color: #000000ad;
+}
+
+.sidebar_open {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    color: white;
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    transition: var(--transition);
+}
+
+.bar:hover {
+    transform: scale(1.1);
+}
+
+.sidenav {
+    width: 200px;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 6px;
+    backdrop-filter: blur(3px);
+    padding: 15px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.546);
+    display: none;
+}
+
+.sidenav i {
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.sidenav .side-ref ul {
+    width: 100%;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.side-ref ul li {
+    width: 100%;
+    padding: 3px 7px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--font);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.3s ease-in;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.side-ref ul li a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.side-ref ul li:hover {
+    transform: scale(1.04);
+    background-color: rgba(245, 245, 245, 0.837);
+}
+
+.side-ref ul li:hover a {
+    color: black;
+}
+
+.side-ref ul li:active {
+    transform: scale(0.95);
+}
+
+.headphone,
+.section {
+    max-width: 70%;
+    min-width: 350px;
+    margin: 0px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    border-radius: 5px;
+    color: white;
+    transform: scale(1.2);
+}
+
+.headphone-detail,
+.section-detail {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px;
+}
+#head_line{
+    background: linear-gradient(to right top, #b34ae3, #df6685,#0beb7b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.headphone-detail h1,h3 {
+    font-family: var(--font);
+}
+
+.headphone-detail p,
+.section p {
+    font-family: var(--font);
+    font-size: 0.8rem;
+    max-width: 400px;
+    height: auto;
+    color: rgba(255, 255, 255, 0.637);
+    margin: 10px 0px;
+}
+
+.headphone_btn {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+}
+
+.headphone_btn button {
+    padding: 5px 20px;
+    color: #c910ccce;
+    border-radius: 20px;
+    border: 2px solid #c910cc;
+    background-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.headphone_btn button:hover {
+    transform: scale(1.05);
+    background-color: #c910cc;
+    color: white;
+}
+
+.headphone_btn button:active {
+    transform: scale(0.9);
+}
+
+.headphone_image,
+.section-image {
+    max-width: 400px;
+    height: auto;
+}
+
+.headphone_image img, .section-image {
+    position: relative;
+    width: 100%;
+    animation: float 2s ease-in infinite;
+}
+
+@keyframes float {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 10px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.Bluetooth {
+    position: relative;
+    top: 200px;
+    flex-direction: row-reverse;
+}
+
+.earburd {
+    position: relative;
+    top: 300px;
+}
+
+.bluetooth_image img,
+.earburd_image img {
+    width: 300px;
+}
+
+footer{
+    padding: 10px 20px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.contact span{
+    font-size: 1.3rem;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.716);
+}
+
+
+.icons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.icons a{
+    font-size: 1.7rem;
+    color:#3784c8;
+    cursor: pointer;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.icons i:hover {
+    color: #b34ae3;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+
+@media (max-width:1085px) {
+    .ref_list{
+        display: none;
+    }
+    .bar{
+        display: block;
+    }
+}
+
+@media (max-width:840px) {
+    footer{
+        justify-content: center;
+    }
+    .contact span{
+        display: none;
+    }
+}
+
+@media (max-width:550px){
+    .order-product{
+        display: none;
+    }
+    .headphone{
+        top: 100px;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width:350px){
+    .headphone{
+        top: 110px;
+    }
+
+   .section{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    .headphone .headphone-detail,  .section-detail{
+        width: 90%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .headphone_btn{
+         gap: 50px;
+    }
+    
+}
